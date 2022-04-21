@@ -151,6 +151,7 @@ header p {
   border-radius: 0.6rem;
   box-shadow: 1px 0 6px 1px #ecebeb;
   width: 16rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 22em) {
   .cta {
