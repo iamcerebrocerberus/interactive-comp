@@ -155,6 +155,7 @@ header p {
 @media screen and (min-width: 22em) {
   .cta {
     width: 21rem;
+    margin: 0;
   }
 }
 @media screen and (min-width: 47.3333em) {
