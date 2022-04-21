@@ -394,7 +394,7 @@ header p {
 .cta__list {
   color: #858fad;
   list-style-image: url("../../assets/icon-check.svg");
-  list-style-position: outside;
+  list-style-position: inside;
   padding-left: 0;
 }
 @media screen and (min-width: 22em) {
@@ -405,6 +405,7 @@ header p {
 @media screen and (min-width: 47.3333em) {
   .cta__list {
     margin: 0;
+    list-style-position: outside;
   }
 }
 .cta__list li {
