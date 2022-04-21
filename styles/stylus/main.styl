@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap')
+
+// primary
+$full-slider-bar = hsl(174, 77%, 80%)
+$slider-bg = hsl(174, 86%, 45%)
+$toggle-check = hsl(174, 86%, 45%)
+$thumb-drg-cl = hsl(174, 43%, 34%)
+$discount-bg = hsl(14, 92%, 95%)
+$discount-txt = hsl(15, 100%, 70%)
+$cta-txt = hsl(226, 100%, 87%)
+
+// neutral
+$prc-comp-bg = hsl(0, 0%, 100%)
+$main-bg = hsl(230, 100%, 99%)
+$body-bg = hsl(230, 100%, 99%)
+$empty-slider-bar = hsl(224, 65%, 95%)
+$toggle-bg = hsl(223, 50%, 87%)
+$toggle = hsl(0, 0%, 100%)
+$txt = hsl(225, 20%, 60%)
+$txt-bg = hsl(227, 35%, 25%)
+$cta-bg = hsl(227, 35%, 25%)
+$prc-txt = hsl(227, 35%, 25%)
+$bottom-border = hsl(224, 65%, 95%)
+
+// toggle measures
+$offset = 0.2rem
+$diameter = .7rem
+
+// medium breakpoint
+$medium = 47.3333em
+
+/* Box sizing rules */
+*
+*::before
+*::after 
+  box-sizing border-box
+
+
+/* Remove default margin */
+body
+h1
+h2
+h3
+h4
+p
+figure
+blockquote
+dl
+dd 
+  margin 0
+
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list']
+ol[role='list'] 
+  list-style none
+
+
+/* Set core root defaults */
+html:focus-within 
+  scroll-behavior smooth
+
+
+/* Set core body defaults */
+body 
+  min-height 100vh
+  text-rendering optimizeSpeed
+  line-height 1.5
+  font-family 'Manrope', sans-serif
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) 
+  text-decoration-skip-ink auto
+
+
+/* Make images easier to work with */
+img
+picture 
+  max-width 100%
+  display block
+
+
+/* Inherit fonts for inputs and buttons */
+input
+button
+textarea
+select 
+  font inherit
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) 
+  html:focus-within 
+   scroll-behavior auto
+  
+  
+  *
+  *::before
+  *::after 
+    animation-duration 0.01ms !important
+    animation-iteration-count 1 !important
+    transition-duration 0.01ms !important
+    scroll-behavior auto !important
+  
+body 
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    background-image url(../../assets/bg-pattern.svg),url(../../assets/bg-pattern.svg)
+    background-color $body-bg
+    background-repeat no-repeat
+    background-position top right 17rem
+
+
+    @media screen and (min-width $medium)
+      justify-content flex-start
+
+
+
+header 
+  text-align center
+  background-image url(../../assets/pattern-circles.svg)
+  background-repeat no-repeat
+  background-position center
+  padding 3.5rem 0
+
+  @media screen and (min-width: 22em)
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+
+  @media screen and (min-width: $medium)
+    margin-bottom 3rem
+    background-size 9.3rem
+    margin-top 4rem
+
+  h1 
+    font-size 1.1rem
+    color $cta-bg
+    margin-bottom .6rem
+
+    @media screen and (min-width: 22em)
+      font-size 1.3rem
+
+    @media screen and (min-width: $medium)
+      font-size 1.8rem
+  
+  p
+    font-size .9rem
+    color $txt
+
+    @media screen and (min-width: 22em)
+      width 22ch
+      font-size 1rem
+
+    @media screen and (min-width: $medium)
+      width 100%
+      font-size .97rem
+
+.cta
+  background-color $prc-comp-bg
+  margin 0 0.5rem
+  border-radius .6rem
+  box-shadow 1px 0 6px 1px rgb(236, 235, 235)
+  width 16rem
+
+  @media screen and (min-width: 22em)
+    width 21rem
+
+  @media screen and (min-width: $medium)
+    width 33.6rem
+
+  &__top
+    border-bottom 1px solid $bottom-border   
+    padding 2rem 1rem 0
+
+    @media screen and (min-width: $medium)
+      display grid
+      grid-template-columns repeat(5, 1fr)
+      grid-template-rows repeat(3, minmax(1rem, auto))
+      padding-top 2.3rem
+      padding-left 3.2rem
+      padding-right 3.2rem
+
+
+  &__input
+    margin-bottom 1rem
+    width 100%
+
+    @media screen and (min-width: 22em) 
+      margin-bottom 2rem
+
+    @media screen and (min-width: $medium)
+      margin-bottom 0
+      margin-top 2rem
+
+  &__pageviews
+    color $txt
+    text-align center
+    text-transform uppercase
+    font-size .8rem
+    font-weight 800
+    letter-spacing .1rem
+    margin-bottom 1.4rem
+
+    .js-views 
+      margin-right .4rem
+
+    @media screen and (min-width: 22em)
+      margin-bottom 2.3rem
+      font-size .9rem
+
+    @media screen and (min-width: $medium)
+      grid-column 1 / 3
+      grid-row 1 / 2
+      margin-bottom 0
+      display flex
+      align-items center
+      font-size .9rem
+  
+
+  &__price
+    color $prc-txt
+    font-size 2rem
+    font-weight 800
+    text-align center
+    display flex
+    align-items center
+    justify-content center
+
+    @media screen and (min-width: 22em)
+      font-size 2.4rem
+
+    @media screen and (min-width: $medium)
+      grid-column 3 / -1
+      grid-row 1 / 2
+      display flex
+      justify-content flex-end
+      font-size 2.5rem
+      
+
+    .month
+      font-size 1rem
+      font-weight 600
+      margin-left .5rem
+      color $txt
+
+      @media screen and (min-width: $medium)
+        font-size 1rem
+    
+
+  &__billing
+    font-size .7rem
+    display flex
+    justify-content center
+    align-items center
+    margin 2rem 0
+
+    @media screen and (min-width: 22em)
+      font-size .8rem
+      margin-bottom 2.5rem
+      margin-right -2.5rem
+
+    > *
+      margin-left .1rem
+
+  
+    @media screen and (min-width: $medium)
+      grid-column 1 / -1
+      grid-row 3 / -1
+      margin-left 2rem
+        
+
+  &__month
+    color $txt
+
+  &__year
+    color $txt
+
+  &__discount
+    color $discount-txt
+    background-color $discount-bg
+    border-radius .5rem
+    font-weight 800
+    padding 0 .3rem
+
+    @media screen and (min-width: 22em)
+      margin-left .3rem
+
+    @media screen and (min-width: $medium)
+      font-size .7rem
+
+    &-desktop
+      display none
+
+      @media screen and (min-width: $medium)
+        display inline-block
+        margin-left .2rem
+      
+
+  &__bottom
+    text-align center
+    padding 0 0 2rem
+
+    @media screen and (min-width: $medium)
+      display flex
+      align-items center
+      justify-content space-between
+      padding: 2rem 3.2rem
+      text-align start
+
+  &__list
+    color $txt
+    list-style-image url(../../assets/icon-check.svg)
+    list-style-position outside
+    padding-left 0
+   
+    @media screen and (min-width: 22em)
+      margin-top 1.5rem
+
+    @media screen and (min-width: $medium)
+      margin 0
+
+    
+    li
+      font-size .7rem
+      margin-bottom .4rem
+
+      @media screen and (min-width: 22em)
+        font-size .8rem
+        margin-bottom .6rem
+        padding-left .7rem
+      
+
+  &__button
+    outline none
+    border none
+    color $cta-txt
+    background-color $cta-bg
+    font-size .7rem
+    font-weight 800
+    padding .6rem 2.3rem
+    border-radius 1.5rem
+    margin-top 1rem
+    cursor pointer
+
+    @media screen and (min-width: 22em)
+      font-size .9rem
+      padding .8rem 2.5rem
+
+    @media screen and (min-width: $medium)
+      margin 0
+
+
+input[type="range"]
+  appearance none
+  width 100%
+  height .5rem
+  border-radius .4rem
+
+  @media screen and (min-width: $medium)
+    grid-column 1 / -1
+    grid-row 2 / 3
+    margin-bottom 1.5rem
+
+  &::-webkit-slider-thumb
+    appearance none
+    outline none
+    border none
+    width 2rem
+    height @width
+    background-color $slider-bg
+    border-radius 50%
+    background-image url(../../assets/icon-slider.svg)
+    background-repeat no-repeat
+    background-size 70%
+    background-position center
+
+    @media screen and (min-width: 22em)
+      width 2.6rem
+      height @width
+
+    &:hover
+      background-color $thumb-drg-cl
+      cursor grab
+    
+  &::-moz-range-thumb 
+    appearance none
+    outline none
+    border none
+    width 2rem
+    height @width
+    background-color $slider-bg
+    box-shadow 0 10px 20px 1px @background-color
+    border-radius 50%
+    background-image url(../../assets/icon-slider.svg)
+    background-repeat no-repeat
+    background-size 70%
+    background-position center
+
+    @media screen and (min-width: 22em)
+      width 2.6rem
+      height @width
+    
+
+    &:hover
+      background-color $thumb-drg-cl
+      box-shadow 0 10px 20px 1px @background-color
+      cursor grab
+   
+
+  &::-ms-thumb 
+    appearance none
+    outline none
+    border none
+    width 2rem
+    height @width
+    background-color $slider-bg
+    border-radius 50%
+    background-image url(../../assets/icon-slider.svg)
+    background-repeat no-repeat
+    background-size 70%
+    background-position center
+
+    @media screen and (min-width: 22em)
+      width 2.6rem
+      height @width
+
+    &:hover
+      background-color $thumb-drg-cl
+      cursor grab
+    
+
+
+.Toggle
+  position relative
+  display inline-flex
+
+  @media screen and (min-width: 22em) 
+    margin 0 .7rem
+  
+  @media screen and (min-width: $medium)
+    margin 0 1rem
+
+  
+  &__input
+    display none
+
+  &__display
+    width $diameter * 2 + $offset * 2
+    height $diameter + $offset * 2
+    position relative
+    background $toggle-bg
+    cursor pointer
+    border-radius .8rem
+    transition 250ms
+    
+  
+
+    &::before
+      content ""
+      width $diameter
+      height $diameter 
+      position absolute
+      background $toggle
+      border-radius 50%
+      left $offset
+      top 50%
+      transform translate(0, -50%)
+      transition inherit
+
+.Toggle__input:checked + .Toggle__display 
+  background-color $toggle-check
+
+.Toggle__input:checked + .Toggle__display::before
+  transform translate(100%, -50%)
+
+
+@media screen and (min-width 22em)
+    $offset = .3rem
+    $diameter = 0.9rem
+
+    .Toggle
+
+      &__display
+        width $diameter * 2 + $offset * 2
+        height $diameter + $offset * 2
+        background $toggle-bg
+        border-radius .99rem
+        transition 250ms
+     
+
+        &::before
+          content ""
+          width $diameter
+          height $diameter 
+          left $offset
+          top 50%
+          transform translate(0, -50%)
+          transition inherit
+
+
+
+
+// utilities
+
+.none 
+  display none
+

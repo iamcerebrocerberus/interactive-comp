@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="cerebro_cerberus">
+    <meta name="description" content="solution code to interactive pricing component">
+    <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+    <title>Frontendmentor | interactive pricing component</title>
+  </head>
+  <body> 
+    <header> 
+      <h1>Simple, traffic-based pricing </h1>
+      <p>Sign-up for our 30-day trial. No credit card required. </p>
+    </header>
+    <main class="cta">
+      <div class="cta__top">
+        <p class="cta__pageviews"><span class="js-views">100k</span> pageviews </p>
+        <input class="cta__input js-slider" type="range" min="0" max="4" value="2">
+        <p class="cta__price">$<span class="js-price">16</span>.00<span class="month"> / month</span></p>
+        <p class="cta__billing"> <span class="cta__month">Monthly Billing </span>
+          <label class="Toggle">
+            <input class="Toggle__input js-toggle" type="checkbox"><span class="Toggle__display"></span>
+          </label><span class="cta__year">Yearly Billing </span><span class="cta__discount"> <span class="cta__percent"><span class="js-negative">-</span>25%</span><span class="cta__discount-desktop">discount</span></span>
+        </p>
+      </div>
+      <div class="cta__bottom"> 
+        <ul class="cta__list">
+          <li>Unlimited websites </li>
+          <li>100% data ownership </li>
+          <li>Email reports </li>
+        </ul>
+        <button class="cta__button">Start my trial</button>
+      </div>
+    </main>
+    <script src="./script/app.mini.js"> </script>
+  </body>
+</html>

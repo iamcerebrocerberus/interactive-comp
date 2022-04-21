@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="author", content="cerebro_cerberus")
+        meta(name="description", content="solution code to interactive pricing component")
+        link(rel="stylesheet", href="./styles/css/main.css")
+        link(rel="shortcut icon", href="./assets/favicon-32x32.png", type="image/x-icon")
+        title Frontendmentor | interactive pricing component
+    body 
+        header 
+            h1 Simple, traffic-based pricing 
+            p Sign-up for our 30-day trial. No credit card required. 
+        main.cta
+            div.cta__top
+                p.cta__pageviews <span class="js-views">100k</span> pageviews 
+                input.cta__input(
+                    type="range", 
+                    min="0", 
+                    max="4",
+                    value="2",
+                    class="js-slider"
+                )
+                p.cta__price $<span class="js-price">16</span>.00<span class="month"> / month</span>
+                p.cta__billing 
+                    span.cta__month Monthly Billing 
+                    label.Toggle
+                        input(
+                            type="checkbox",
+                            class="Toggle__input js-toggle",
+                        )
+                        span.Toggle__display
+                    span.cta__year Yearly Billing 
+                    span.cta__discount 
+                        span.cta__percent <span class="js-negative">-</span>25%
+                        span.cta__discount-desktop discount
+            .cta__bottom 
+                ul.cta__list
+                    li Unlimited websites 
+                    li 100% data ownership 
+                    li Email reports 
+                button.cta__button Start my trial
+        script(src="./script/app.mini.js") 
+                    
+
+
+                
